@@ -9,11 +9,11 @@ int main(void)
 {
 	int i, j, a, b, c, d;
 
-	for(i = 0; i <= 99; i++)
+	for (i = 0; i <= 99; i++)
 	{
 		a = i / 10;
 		b = i % 10;
-		for(j = i; j <= 99; j++)
+		for (j = i; j <= 99; j++)
 		{
 			c = j / 10;
 			d = j % 10;
@@ -22,11 +22,11 @@ int main(void)
 			putchar(' ');
 			putchar('0' + c);
 			putchar('0' + d);
-			if(i != 99 || j != 99)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+				if (i != 99 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 		}
 	}
 	return (0);
