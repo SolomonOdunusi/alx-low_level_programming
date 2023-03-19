@@ -13,6 +13,6 @@ int main(void)
 	printf("Size of float: %ld byte(S)\n", sizeof(float));
 
 	printf("\n");
-
+	fprintf(stderr, "");
 	return (0);
 }
