@@ -9,19 +9,20 @@
   */
 
 char *_strstr(char *haystack, char *needle)
-{
-	for (; *haystack != '\0'; haystack++)
+i{
+	for ( ; *haystack != '\0'; haystack++)
 	{
 		char *h = haystack;
 		char *n = needle;
-		for (; *n == *h && *n != '\0'; h++)
+
+		for ( ; *n == *h && *n != '\0'; h++)
 		{
 			n++;
 		}
 		if (*n == '\0')
 		{
-			return haystack;
+			return (haystack);
 		}
 	}
-	return NULL;
+	return (NULL);
 }
