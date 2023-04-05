@@ -9,13 +9,13 @@
   */
 
 char *_strstr(char *haystack, char *needle)
-i{
-	for ( ; *haystack != '\0'; haystack++)
+{
+	for (; *haystack != '\0'; haystack++)
 	{
 		char *h = haystack;
 		char *n = needle;
 
-		for ( ; *n == *h && *n != '\0'; h++)
+		for (; *n == *h && *n != '\0'; h++)
 		{
 			n++;
 		}
