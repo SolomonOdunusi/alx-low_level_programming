@@ -1,0 +1,1 @@
+Static and shared libraries
