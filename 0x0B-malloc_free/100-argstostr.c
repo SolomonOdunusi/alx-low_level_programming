@@ -9,10 +9,11 @@
   * Return: returns concatented args
   */
 
-char *argstostr(unsigned int ac, char **av)
+char *argstostr(int ac, char **av)
 {
 	char *str;
-	size_t len, i, j, k;
+	int i, j;
+	size_t len, k;
 
 	if (ac == 0 || av == NULL)
 	{
