@@ -15,9 +15,7 @@ int main(int argc, char **argv)
 		_puts("Error");
 		return (98);
 	}
-
 	_mul(argv[1], argv[2]);
-
 	return (0);
 }
 
@@ -69,7 +67,6 @@ int _isdigit(char *s)
 		}
 		i++;
 	}
-
 	return (1);
 }
 
