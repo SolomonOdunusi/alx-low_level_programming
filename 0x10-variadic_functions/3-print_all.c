@@ -42,7 +42,7 @@ void print_all(const char * const format, ...)
 		ptr++;
 
 		if (*ptr != '\0' && (*ptr == 'c' || *ptr == 'i'
-		|| *ptr == 'f' || *ptr == 's'))
+|| *ptr == 'f' || *ptr == 's'))
 		printf(", ");
 	}
 	printf("\n");
