@@ -4,7 +4,6 @@
  * op_add - returns the sum of a and b.
  * @a: first operand
  * @b: second operand
-
  * Return: sum of a and b.
  */
 int op_add(int a, int b)
