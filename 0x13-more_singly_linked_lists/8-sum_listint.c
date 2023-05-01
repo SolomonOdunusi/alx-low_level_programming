@@ -3,7 +3,7 @@
 /**
  * sum_listint - Calculates the sum of all the data in a linked list.
  * @head: A pointer to the head of the linked list.
- * Return: it returns the adds of all the data in list, or 0 if the list is empty.
+ * Return: it returns the adds of all the data in list else 0 if empty
  */
 int sum_listint(listint_t *head)
 {

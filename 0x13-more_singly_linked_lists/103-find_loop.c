@@ -3,7 +3,7 @@
 /**
  * find_listint_loop - Finds the loop in a linked list.
  * @head: A pointer to the head of the linked list.
- * Return: returns the address of the node where the loop starts else returns NULL
+ * Return: returns address of the node at the start of loop else returns NULL
  */
 listint_t *find_listint_loop(listint_t *head)
 {
