@@ -11,18 +11,13 @@ size_t free_listint_safe(listint_t **h)
 	size_t size_list = 0;
 	listint_t *curr;
 
-	if (h == NULL)
+	if (h == NULL || *h == NULL)
 	{
-		return;
+		return (0);
 	}
 
 	while (*h)
 	{
-		if (*h <= (*h)->next)
-		{
-			*h = NULL;
-			exit(98);
-		}
 		curr = (*h)->next;
 		free(*h);
 		size_list++;
