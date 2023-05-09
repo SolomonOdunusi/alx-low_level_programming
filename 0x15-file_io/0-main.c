@@ -16,7 +16,7 @@ int main(int ac, char **av)
 		exit(1);
 	}
 	n = read_textfile(av[1], 114);
-	printf("(printed chars: %li)\n", n);
+	printf("\n(printed chars: %li)\n", n);
 	n = read_textfile(av[1], 1024);
 	printf("(printed chars: %li)\n", n);
 	return (0);
