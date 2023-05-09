@@ -2,8 +2,8 @@
 
 /**
  * main - check the code
- * ac: arg count
- * av: arg vector
+ * @ac: argument count
+ * @av: argument vector that is array of strings
  * Return: Always 0.
  */
 int main(int ac, char **av)

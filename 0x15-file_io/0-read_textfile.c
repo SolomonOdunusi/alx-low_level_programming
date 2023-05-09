@@ -8,27 +8,26 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	FILE *fp = fopen(filename, "r");
+	char *buffer = (char *) malloc(sizeof(char) * letters);
+	ssize_t num_read = fread(buffer, sizeof(char), letters, fp);
+	ssize_t num_written = write(STDOUT_FILENO, buffer, num_read);
+
 	if (filename == NULL)
 	{
 		return (0);
 	}
-
-	FILE *fp = fopen(filename, "r");
 
 	if (fp == NULL)
 	{
 		return (0);
 	}
 
-	char *buffer = (char*) malloc(sizeof(char) * letters);
-
 	if (buffer == NULL)
 	{
 		fclose(fp);
 		return (0);
 	}
-
-	ssize_t num_read = fread(buffer, sizeof(char), letters, fp);
 
 	if (num_read == -1)
 	{
@@ -37,15 +36,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	ssize_t num_written = write(STDOUT_FILENO, buffer, num_read);
-	
 	if (num_written == -1 || num_written != num_read)
 	{
 		fclose(fp);
 		free(buffer);
 		return (0);
 	}
-
 	fclose(fp);
 	free(buffer);
+	return (num_written);
+}
 
