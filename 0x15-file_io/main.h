@@ -8,30 +8,25 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <sys/stat.h>
+#include <stdint.h>
+#include <sys/types.h>
+
 
 #define BUFFER_SIZE 1024
+#define BUF_SIZE 64
 
-typedef struct {
-    unsigned char e_ident[16];
-    uint16_t e_type;
-    uint16_t e_machine;
-    uint32_t e_version;
-    uint64_t e_entry;
-    uint64_t e_phoff;
-    uint64_t e_shoff;
-    uint32_t e_flags;
-    uint16_t e_ehsize;
-    uint16_t e_phentsize;
-    uint16_t e_phnum;
-    uint16_t e_shentsize;
-    uint16_t e_shnum;
-    uint16_t e_shstrndx;
-} Elf64_Ehdr;
 
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 void print_error_and_exit(const char *error_message, const char *file_name, int exit_code);
-void display_elf_header(char *filename);
+void print_magic(unsigned char *buf);
+void print_class(unsigned char *buf);
+void print_data(unsigned char *buf);
+void print_version(unsigned char *buf);
+void print_osabi(unsigned char *buf);
+void print_abiversion(unsigned char *buf);
+void print_type(unsigned char *buf);
+void print_entry(unsigned char *buf);
 
 #endif /** __MAIN_H__ */
