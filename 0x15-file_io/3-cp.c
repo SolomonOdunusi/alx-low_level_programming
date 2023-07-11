@@ -1,8 +1,5 @@
 #include "main.h"
 
-void print_err_exit(const char *err_mes,
-const char *file_name, int exit_code);
-
 /**
  * main - Main entry point
  * @argc: argument count
