@@ -4,6 +4,8 @@
  * insert_dnodeint_at_index - the func inserts a new node at a given position
  * @h: pointer to head of list
  * @idx: index of the list where the new node should be added
+ * @n: the number of elements
+ * Return: returns the index
 */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {

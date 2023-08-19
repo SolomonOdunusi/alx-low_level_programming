@@ -1,14 +1,14 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - adds a new node at the end of the list
+ * add_dnodeint - adds a new node at the start of the list
  * @head: pointer to head of list
  * @n: integer to be included in new node
  * Return: returns the address of new element else NULL
 */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	struct dlistint_s* new_node = (struct dlistint_s*)malloc(sizeof(struct dlistint_s));
+	struct dlistint_s *new_node = malloc(sizeof(struct dlistint_s));
 
 	new_node->n = n;
 

@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * print_dlistint - prints all the elements of a dlistint_t list
- * @h: pointer to head of list
- * Return: number of nodes
+ * free_dlistint - the funcfrees the dlistint_t list
+ * @head: pointer to head of list
+ * Return: free
 */
 void free_dlistint(dlistint_t *head)
 {
