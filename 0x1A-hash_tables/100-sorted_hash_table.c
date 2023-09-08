@@ -59,7 +59,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			free(current->value);
 			current->value = strdup(value);
 			if (current->value == NULL)
-			return (0);
+				return (0);
 			return (1);
 		}
 		current = current->next;
@@ -135,7 +135,7 @@ void shash_table_print(const shash_table_t *ht)
 		while (current != NULL)
 		{
 			if (flag == 1)
-			printf(", ");
+				printf(", ");
 			printf("'%s': '%s'", current->key, current->value);
 			flag = 1;
 			current = current->next;
@@ -166,7 +166,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 		while (current != NULL)
 		{
 			if (flag == 1)
-			printf(", ");
+				printf(", ");
 			printf("'%s': '%s'", current->key, current->value);
 			flag = 1;
 			current = current->next;
