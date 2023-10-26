@@ -1,5 +1,4 @@
-# ALX low level programming language
-`C - Makefile`
+# C - Makefile
 
 ### Requirements
 **General**

@@ -10,11 +10,29 @@
 #include <sys/stat.h>
 #include <stdint.h>
 #include <sys/types.h>
-#include <elf.h>
 
 #define BUFFER_SIZE 1024
 #define BUF_SIZE 64
 #define FILE_PERM (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP)
+#define EI_NIDENT 16
+
+typedef struct
+{
+	unsigned char e_ident[EI_NIDENT];
+	unint16_t e_type;
+	unint16_t e_machine;
+	unint32_t e_version;
+	unint64_t e_entry;
+	unint64_t e_phoff;
+	unint64_t e_shoff;
+	unint32_t e_flags;
+	unint16_t e_ehsize;
+	unint16_t e_phentsize;
+	unint16_t e_phnum;
+	unint16_t e_shentsize;
+	unint16_t e_shnum;
+	unint16_t e_shstrndx;
+} Elf64_Ehdr;
 
 
 ssize_t read_textfile(const char *filename, size_t letters);
