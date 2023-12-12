@@ -3,7 +3,7 @@
 /**
  * jump_search - This function that searches for a value
  * thru a sorted array with jump search
- * 
+ *
  * @array: ptr to the first element of the array to search
  * @size: num of elements in array
  * @value: value to search for
